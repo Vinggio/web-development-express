@@ -1,0 +1,33 @@
+
+body {
+    background-color: rgb(243, 238, 255);
+    color: rgb(26, 1, 114);
+}
+
+main, header {
+    padding: 40px 120px;
+}
+
+header {
+    background: aliceblue;
+}
+
+section {
+    background: white;
+    padding: 40px;
+    margin: 20px;
+}
+
+.my_option {
+    cursor: pointer;
+}
+
+.background_colored {
+    background-color: rgb(182, 149, 130);
+    border-color: black;
+}
+
+#question {
+    width: 100%;
+    background-color:rgb(164, 164, 168)
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alebrije bootcamp AB-56</title>
+    <link rel="stylesheet" href="./my_styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Finished project</h1>
+    </header>
+    <main>
+        <section>
+            <h1><strong>todos</strong></h1>
+            <div>
+                <input placeholder="What needs to be done?" type="text" id="question"></input>
+            </div>
+            <br></br>
+            <div>
+                <label for="my_list">Filter: </label>
+                <select id="my_list">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+            <div class="background_colored"><h1 class="my_option">Task A1</h1></div>
+            <div class="background_colored"><h1 class="my_option">Task A2</h1></div>
+            <div class="background_colored"><h1 class="my_option">Task A3</h1></div>
+            <button onclick="(function() { alert('Items have been removed'); })()">Remove completed items</button>
+        </section>
+    </main>
+</body>
+</html>
