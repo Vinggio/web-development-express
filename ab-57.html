@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinggio Portfolio</title>
+    <link rel="stylesheet" href="./ab-57.css"/>
+    <script src="utils.js" type="text/javascript"></script>
+    <script>
+        var otherSubjectId = "otherSubject";
+        function sendMessage(){
+            var email =  document.getElementById("email").value;
+            var isEmailValid = validateEmail(email);
+            if (isEmailValid != true){
+                return alert("Your email address is wrong.");
+            }
+            // should execute the delivering script
+            let form = document.getElementById("send_email");
+            form.action = "https://echo-form-body-u6ozq7lkydx0.runkit.sh/";
+            form.submit();
+            alert("Your message has been delivered, you will receive a response soon.");
+            return form.submit();
+        }
+
+        function verifyOther(){
+            var selectedOption = document.getElementById("selectedSubject").selectedIndex;
+            var otherIndex = 3;
+            var otherSubject = document.getElementById("otherSubject");
+            if (selectedOption === otherIndex){
+                otherSubject.hidden = false;
+            }else{
+                otherSubject.hidden= true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <header class="center">
+        <h1><strong>Welcome</strong></h1>
+    </header>
+    <nav class="navigation-items">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main class="center">
+        <section id="about">
+            <h2><strong><blockquote>About</blockquote></strong></h2>
+            <h4>My name is Carlovinggio</h4>
+            <h4>I am a full stack developer, highly experienced in backend, specially with webscraping</h4>
+            <h4>I have experience in react and django</h4>
+        </section>
+        <br></br>
+        <section id="projects">
+            <h2><strong><blockquote>Projects</blockquote></strong></h2>
+            <h3><em>Vending machine</em></h3 >
+            <h3><em>School platform</em></h3>
+            <h3><em>Exchange social networks actions</em></h3>
+        </section>
+        <br></br>
+        <section id="technologies">
+            <h2><strong><blockquote>Technologies</blockquote></strong></h2>
+            <h5>Python</h5>
+            <h5>Django</h5>
+            <h5>React</h5>
+            <h5>React-native</h5>
+            <h5>C++</h5>
+            <h5>C#</h5>
+            <h5>Arduino</h5>
+            <h5>VSCode</h5>
+            <h5>IntelliJ IDEA</h5>
+            <h5>AWS</h5>
+            <h5>XPATHS</h5>
+        </section>
+        <br></br>
+        <section id="contact">
+            <h2><strong><blockquote>Contact</blockquote></strong></h2>
+            <form id="send_email" method="post">
+                <input placeholder="Email" id="email" type="text" name="email" class="form"></input>
+                <label class="form">Select your subject</label>
+                <select id="selectedSubject" onchange="verifyOther()" class="form">
+                    <option value="socializing">Socializing</option>
+                    <option value="jobOffer">Job offer</option>
+                    <option value="projects">Interested in your projects</option>
+                    <option value="other" >Other</option>
+                </select>
+                <input id="otherSubject" hidden="true" name="subject" placeholder="Set your subject" class="form"></input>
+                <textarea placeholder="Message" id="message" class="form" name="message"></textarea>
+                <input type="button" onclick="sendMessage()" class="form" value="Submit"></input>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
