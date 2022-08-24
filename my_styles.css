@@ -23,11 +23,11 @@ section {
 }
 
 .background_colored {
-    background-color: rgb(182, 149, 130);
+    background-color: rgb(187, 247, 234);
     border-color: black;
 }
 
 #question {
     width: 100%;
-    background-color:rgb(164, 164, 168)
+    background-color:rgb(252, 245, 244)
 }
