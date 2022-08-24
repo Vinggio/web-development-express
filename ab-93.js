@@ -11,20 +11,6 @@ function getCSVData(){
     return data;
 }
 
-//function convertBruteCurrencyToArray(bruteCurrencyValue){
-    /**
-     * Parameters
-     * ----------
-     * bruteCurrencyValue
-     *  brute data, e.g. "1,BTC,0.152"
-     * 
-     * Returns
-     * -------
-     * data in an array form, e.g. ["BTC", 0.152]
-     */
-    
-    
-
 
 function setMaxCurrencyValues(splittedLines){
     /*
@@ -41,10 +27,8 @@ function setMaxCurrencyValues(splittedLines){
         return [splittedCurrency[1], parseFloat(splittedCurrency[2])];
     }
     currenciesArray = splittedLines.map(convertBruteCurrencyToArray);
-    console.log(currenciesArray);
     let myCurrenciesMap = new Map();
     for(let currencyData of currenciesArray){
-        console.log(currencyData);
         key = currencyData[0];
         value = currencyData[1];
         actualCurrencyValue = myCurrenciesMap.get(key);
