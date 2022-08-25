@@ -22,7 +22,6 @@ let startDate = "2021-01-01";
 let endDate = "2021-03-01";
 
 let BitcointPriceIndex = await getBitcoinPrices(startDate, endDate);
-console.log(BitcointPriceIndex);
 let maxValue = 0;
 let dateOfMax = "";
 
